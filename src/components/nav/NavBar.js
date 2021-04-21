@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 import "../sass/style.scss";
 import Logo from "../../img/logo.png";
 const NavBar = () => {
@@ -15,10 +15,12 @@ const NavBar = () => {
               activeClass="active"
               className="nav-link"
               to="home"
+              top={0}
               spy={true}
               smooth={true}
-              duration={1000}
-              top={0}
+              offset={-70}
+              duration={100}
+              // onClick={scroll.scrollToTop}
             >
               Home
             </Link>
@@ -28,10 +30,11 @@ const NavBar = () => {
               activeClass="active"
               className="nav-link"
               to="about"
+              top={0}
               spy={true}
               smooth={true}
-              duration={1000}
-              top={0}
+              offset={-70}
+              duration={100}
             >
               About
             </Link>
@@ -43,7 +46,7 @@ const NavBar = () => {
               to="work-process"
               spy={true}
               smooth={true}
-              duration={1000}
+              duration={100}
               top={0}
             >
               Work process
@@ -56,7 +59,7 @@ const NavBar = () => {
               to="testimonial"
               spy={true}
               smooth={true}
-              duration={1000}
+              duration={100}
               top={0}
             >
               Testimonial
@@ -66,10 +69,10 @@ const NavBar = () => {
             <Link
               activeClass="active"
               className="nav-link"
-              to="pricing-table"
+              to="pricing-plans"
               spy={true}
               smooth={true}
-              duration={1000}
+              duration={100}
               top={0}
             >
               Pricing Tables
@@ -79,10 +82,10 @@ const NavBar = () => {
             <Link
               activeClass="active"
               className="nav-link"
-              to="blogs-entries"
+              to="blog-entry"
               spy={true}
               smooth={true}
-              duration={1000}
+              duration={100}
               top={0}
             >
               Blogs entries
@@ -92,10 +95,10 @@ const NavBar = () => {
             <Link
               activeClass="active"
               className="nav-link"
-              to="contact"
+              to="contact-us"
               spy={true}
               smooth={true}
-              duration={1000}
+              duration={100}
               top={0}
             >
               Contacts us

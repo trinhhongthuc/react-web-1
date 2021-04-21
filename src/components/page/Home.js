@@ -8,6 +8,9 @@ import SectionWorkProcess from "../content/SectionWorkProcess";
 import Heading from "../Heading";
 import Testimonial from "../content/Testimonial";
 import PricingPlans from "../content/PricingPlans";
+import SectionBlogEntry from "../content/SectionBlogEntry";
+import SectionContact from "../content/SectionContact";
+import Footer from "../Footer";
 
 const index = () => {
   return (
@@ -27,18 +30,18 @@ const index = () => {
           </HomeBox>
         </div>
       </div>
-      <div className="about">
+      <div className="about" id="about">
         <SectionAbout className="about"></SectionAbout>
       </div>
 
-      <div className="work-process">
+      <div className="work-process" id="work-process">
         <Heading title="Work Process">
           Aenean nec tempor metus. Maecenas ligula dolor, commodo in imperdiet
           interdum, vehicula ut ex. Donec ante diam.
         </Heading>
         <SectionWorkProcess />
       </div>
-      <div className="testimonial">
+      <div className="testimonial" id="testimonial">
         <Heading
           title="What do they say?"
           colorTitle="colorTitle"
@@ -50,7 +53,7 @@ const index = () => {
         <Testimonial></Testimonial>
       </div>
 
-      <div className="pricing-plans">
+      <div className="pricing-plans" id="pricing-plans">
         <Heading
           title="Pricing Plans"
           colorTitle="colorTitle"
@@ -59,9 +62,35 @@ const index = () => {
           Donec vulputate urna sed rutrum venenatis. Cras consequat magna quis
           arcu elementum, quis congue risus volutpat.
         </Heading>
-
         <PricingPlans></PricingPlans>
       </div>
+
+      <div className="blog-entry" id="blog-entry">
+        <Heading
+          title="Blog Entries"
+          colorTitle="colorTitle"
+          colorParagraph="colorParagraph"
+        >
+          Integer molestie aliquam gravida. Nullam nec arcu finibus, imperdiet
+          nulla vitae, placerat nibh. Cras maximus venenatis molestie.
+        </Heading>
+
+        <SectionBlogEntry></SectionBlogEntry>
+      </div>
+
+      <div className="contact-us" id="contact-us">
+        <Heading
+          title="Talk To Us"
+          colorTitle="colorTitle"
+          colorParagraph="colorParagraph"
+        >
+          Maecenas pellentesque ante faucibus lectus vulputate sollicitudin.
+          Cras feugiat hendrerit semper.
+        </Heading>
+
+        <SectionContact></SectionContact>
+      </div>
+      <Footer></Footer>
     </>
   );
 };
